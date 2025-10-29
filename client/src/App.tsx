@@ -57,8 +57,8 @@ function App() {
       {/* NAVBAR ATAS → hanya tampil di layar medium ke atas */}
       <div className="hidden md:flex fixed top-0 left-0 right-0 bg-white text-black items-center justify-between px-4 py-1 shadow z-50">
         <div className="flex items-center space-x-6">
-          <img src="/logokemnaker.png" alt="Logo Kemnaker" className="h-12" />
-          <img src="/logovokasi.png" alt="Logo Vokasi" className="h-5" />
+          <img src="/logounj.png" alt="Logo Kemnaker" className="h-12" />
+          <img src="/logovoerukas.png" alt="Logo Vokasi" className="h-5" />
         </div>
 
         <div className="flex space-x-14 text-sm">

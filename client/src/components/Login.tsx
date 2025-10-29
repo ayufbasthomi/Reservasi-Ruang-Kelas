@@ -51,7 +51,7 @@ export default function Login({ onLogin, onSwitchToRegister }: LoginProps) {
         {/* Left Panel */}
         <div className="w-3/5 bg-white flex flex-col justify-center items-center space-y-10">
           <img
-            src="/logokemnaker.png"
+            src="/logounj.png"
             alt="Kemnaker"
             className="h-80 select-none pointer-events-none"
             draggable={false}
@@ -59,7 +59,7 @@ export default function Login({ onLogin, onSwitchToRegister }: LoginProps) {
           />
           <hr className="w-2/3 border-t-2 border-blue-700" />
           <img
-            src="/logovokasi.png"
+            src="/logoerukas.png"
             alt="Pelatihan Vokasi"
             className="h-40 select-none pointer-events-none"
             draggable={false}
