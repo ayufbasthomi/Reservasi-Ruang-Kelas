@@ -16,15 +16,15 @@ const auth = new google.auth.GoogleAuth({
 const sheets = google.sheets({ version: "v4", auth });
 
 const SPREADSHEET_ID =
-  "13H_XvOYjwDskZbh7e-6TQGHw4MWltkHWnJ9bKRCL9Dw"; // ID spreadsheet
+  "1kI8AkkEF5XWpiuGPXsoFKTGT57ivkKYYNPcJgi6kVP0"; // ID spreadsheet
 
 // 🔹 Mapping nama ruangan -> nama sheet
 const SHEET_MAP: Record<string, string> = {
-  "Ruang Rapat Dirjen": "Ruang Rapat Dirjen",
-  "Ruang Rapat Sesditjen": "Ruang Rapat Sesditjen",
-  "Command Center": "Command Center",
-  "Ruang Rapat Lt2": "Ruang Rapat Lt2",
-  "Ballroom": "Ballroom",
+  "Ruang Kelas 1": "Ruang Kelas 1",
+  "Ruang Kelas 2": "Ruang Kelas 2",
+  "Ruang Kelas 3": "Ruang Kelas 3",
+  "Ruang Kelas 4": "Ruang Kelas 4",
+  "Ruang Kelas 5": "Ruang Kelas 5",
 };
 
 // Helper untuk dapatkan nama sheet berdasarkan room
