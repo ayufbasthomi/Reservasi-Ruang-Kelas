@@ -398,7 +398,7 @@ export default function BookingTab({
 
           {/* ✅ Unit Kerja */}
           <div className="mb-4">
-            <label className="block text-sm mb-1">Unit Kerja</label>
+            <label className="block text-sm mb-1">Kelas</label>
             <select
               value={unitKerja}
               onChange={(e) => setUnitKerja(e.target.value)}
