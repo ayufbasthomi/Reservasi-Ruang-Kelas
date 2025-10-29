@@ -33,15 +33,24 @@ var __importStar = (this && this.__importStar) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-// backend/models/Booking.ts
 const mongoose_1 = __importStar(require("mongoose"));
 const BookingSchema = new mongoose_1.Schema({
-    room: { type: String, required: true },
+    room: { type: String, required: true, trim: true },
     date: { type: String, required: true },
     startTime: { type: String, required: true },
     endTime: { type: String, required: true },
-    pic: { type: String, required: true },
-});
-// ✅ Tambahkan compound index unik (supaya tidak bisa double booking)
+    pic: { type: String, required: true, trim: true },
+    unitKerja: { type: String, required: true, trim: true },
+}, { timestamps: true });
+// Index dan validasi
+BookingSchema.index({ room: 1, date: 1 });
 BookingSchema.index({ room: 1, date: 1, startTime: 1, endTime: 1 }, { unique: true });
+BookingSchema.pre("save", function (next) {
+    const booking = this;
+    if (booking.startTime >= booking.endTime) {
+        return next(new Error("End time harus lebih besar dari start time"));
+    }
+    next();
+});
+// Export model
 exports.default = mongoose_1.default.model("Booking", BookingSchema);

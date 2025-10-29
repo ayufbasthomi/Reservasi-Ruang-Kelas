@@ -34,14 +34,13 @@ const SHEET_MAP = {
 };
 // Helper untuk dapatkan nama sheet berdasarkan room
 function getSheetName(room) {
-    // return SHEET_MAP[room] || "Sheet1"; // fallback ke Sheet1 kalau tidak cocok
-    return SHEET_MAP[room];
+    return SHEET_MAP[room] || "Sheet1";
 }
 // ✅ Tambahkan booking ke Google Sheets
 function appendBookingToSheet(bookingData) {
     return __awaiter(this, void 0, void 0, function* () {
         const sheetName = getSheetName(bookingData.room);
-        const range = `${sheetName}!A:E`;
+        const range = `${sheetName}!A:F`; // ✅ karena ada 6 kolom sekarang
         yield sheets.spreadsheets.values.append({
             spreadsheetId: SPREADSHEET_ID,
             range,
@@ -54,6 +53,7 @@ function appendBookingToSheet(bookingData) {
                         bookingData.startTime,
                         bookingData.endTime,
                         bookingData.pic,
+                        bookingData.unitKerja, // ✅ ditambahkan di kolom terakhir
                     ],
                 ],
             },
@@ -66,7 +66,7 @@ function deleteBookingFromSheet(bookingData) {
     return __awaiter(this, void 0, void 0, function* () {
         var _a, _b;
         const sheetName = getSheetName(bookingData.room);
-        const range = `${sheetName}!A:E`;
+        const range = `${sheetName}!A:F`; // ✅ karena 6 kolom
         const response = yield sheets.spreadsheets.values.get({
             spreadsheetId: SPREADSHEET_ID,
             range,
@@ -74,7 +74,7 @@ function deleteBookingFromSheet(bookingData) {
         const rows = response.data.values || [];
         const normalize = (val) => (val || "").toString().trim();
         const rowIndex = rows.findIndex((row) => {
-            const [room, date, startTime, endTime, pic] = row.map((cell) => normalize(cell));
+            const [room, date, startTime, endTime, pic, unitKerja] = row.map((cell) => normalize(cell));
             return (room === normalize(bookingData.room) &&
                 date === normalize(bookingData.date) &&
                 (startTime === normalize(bookingData.startTime) ||
@@ -83,7 +83,8 @@ function deleteBookingFromSheet(bookingData) {
                 (endTime === normalize(bookingData.endTime) ||
                     endTime === `${normalize(bookingData.endTime)}:00` ||
                     endTime === normalize(bookingData.endTime).replace(/^0/, "")) &&
-                pic === normalize(bookingData.pic));
+                pic === normalize(bookingData.pic) &&
+                unitKerja === normalize(bookingData.unitKerja));
         });
         if (rowIndex === -1) {
             console.log(`⚠️ Data booking tidak ditemukan di sheet "${sheetName}":`, bookingData);
