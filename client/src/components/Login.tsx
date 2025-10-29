@@ -80,9 +80,9 @@ export default function Login({ onLogin, onSwitchToRegister }: LoginProps) {
           <div className="max-w-xl w-full relative z-10">
             <div className="mb-40">
               <h2 className="text-center text-4xl font-bold">SELAMAT DATANG DI</h2>
-              <h1 className="text-center text-8xl font-bold mb-2">SIPAMAN</h1>
+              <h1 className="text-center text-8xl font-bold mb-2">e-RUKAS</h1>
               <p className="text-center text-2xl mb-6">
-                Sistem Informasi Pelayanan Peminjaman Ruangan
+                Sistem Informasi Pelayanan Peminjaman Ruangan Kelas
               </p>
             </div>
 
@@ -162,9 +162,9 @@ export default function Login({ onLogin, onSwitchToRegister }: LoginProps) {
         <div className="max-w-md w-full relative z-10">
           <div className="mb-6 text-center">
             <h2 className="text-2xl font-bold">SELAMAT DATANG DI</h2>
-            <h1 className="text-5xl font-bold mb-1">SIPAMAN</h1>
+            <h1 className="text-5xl font-bold mb-1">e-RUKAS</h1>
             <p className="text-lg mb-4">
-              Sistem Informasi Pelayanan Peminjaman Ruangan
+              Sistem Informasi Pelayanan Peminjaman Ruangan Kelas
             </p>
           </div>
 

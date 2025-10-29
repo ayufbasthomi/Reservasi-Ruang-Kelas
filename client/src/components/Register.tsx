@@ -82,8 +82,8 @@ export default function Register({ onRegister, onSwitchToLogin }: RegisterProps)
           <div className="relative max-w-xl w-full flex flex-col items-center">
             <div className="mb-16 text-center">
               <h2 className="text-4xl font-bold">BUAT AKUN BARU</h2>
-              <h1 className="text-8xl font-bold mb-2">SIPAMAN</h1>
-              <p className="text-2xl">Sistem Informasi Pelayanan Peminjaman Ruangan</p>
+              <h1 className="text-8xl font-bold mb-2">e-RUKAS</h1>
+              <p className="text-2xl">Sistem Informasi Pelayanan Peminjaman Ruangan Kelas</p>
             </div>
 
             <form
@@ -181,7 +181,7 @@ export default function Register({ onRegister, onSwitchToLogin }: RegisterProps)
         </div>
 
         <p className="absolute bottom-6 right-[15.5rem] text-[9px] text-white">
-          Dibuat oleh M. Royhan Iqbal
+          Dibuat oleh Sara Trias Millenia
         </p>
       </div>
 
@@ -199,9 +199,9 @@ export default function Register({ onRegister, onSwitchToLogin }: RegisterProps)
         <div className="relative max-w-md w-full">
           <div className="mb-6 text-center">
             <h2 className="text-2xl font-bold">DAFTAR AKUN BARU</h2>
-            <h1 className="text-5xl font-bold mb-1">SIPAMAN</h1>
+            <h1 className="text-5xl font-bold mb-1">e-RUKAS</h1>
             <p className="text-lg mb-4">
-              Sistem Informasi Pelayanan Peminjaman Ruangan
+              Sistem Informasi Pelayanan Peminjaman Ruangan Kelas
             </p>
           </div>
 
