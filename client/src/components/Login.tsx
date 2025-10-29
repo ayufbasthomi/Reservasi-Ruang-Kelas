@@ -61,7 +61,7 @@ export default function Login({ onLogin, onSwitchToRegister }: LoginProps) {
           <img
             src="/logoerukas.png"
             alt="Pelatihan Vokasi"
-            className="h-40 select-none pointer-events-none"
+            className="h-80 select-none pointer-events-none"
             draggable={false}
             onContextMenu={(e) => e.preventDefault()}
           />
@@ -145,8 +145,8 @@ export default function Login({ onLogin, onSwitchToRegister }: LoginProps) {
           </div>
         </div>
 
-        <p className="absolute bottom-6 right-[15.5rem] text-[9px] text-white">
-          Dibuat oleh M. Royhan Iqbal
+        <p className="absolute bottom-6 right-[320px] text-[9px] text-white items-center">
+          Dibuat oleh Sara Trias Millenia
         </p>
       </div>
 

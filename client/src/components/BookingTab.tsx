@@ -25,23 +25,18 @@ export default function BookingTab({
   // 🔹 Tambahan: Unit Kerja
   const [unitKerja, setUnitKerja] = useState<string>("");
   const unitOptions = [
-    "Setditjen-URT",
-    "Setditjen-Keuangan",
-    "Setditjen-SDMA",
-    "Setditjen-PUUKS",
-    "Bina Stankom",
-    "Bina Intala",
-    "Bina Lemlatvok",
-    "Bina Lavogan",
-    "Bina Produktivitas",
+    "MM Reguler A",
+    "MM Reguler B",
+    "MM Non-reguler A",
+    "MM Non-reguler B",
   ];
 
   const rooms: { id: number; name: string; capacity: string; img: string }[] = [
-    { id: 1, name: "Ruang Rapat Dirjen", capacity: "24 orang", img: "/gambarsatu.jpg" },
-    { id: 2, name: "Ruang Rapat Sesditjen", capacity: "10 orang", img: "/gambardua.jpeg" },
-    { id: 3, name: "Command Center", capacity: "12 orang", img: "/gambarempat.jpg" },
-    { id: 4, name: "Ruang Rapat Lt2", capacity: "16 orang", img: "/gambarlima.jpg" },
-    { id: 5, name: "Ballroom", capacity: "400 orang", img: "/gambarenam.jpg" },
+    { id: 1, name: "Ruang Kelas 1", capacity: "50 orang", img: "/gambarsatu.jpg" },
+    { id: 2, name: "Ruang Kelas 2", capacity: "50 orang", img: "/gambardua.jpeg" },
+    { id: 3, name: "Ruang Kelas 3", capacity: "50 orang", img: "/gambarempat.jpg" },
+    { id: 4, name: "Ruang Kelas 4", capacity: "50 orang", img: "/gambarlima.jpg" },
+    { id: 5, name: "Ruang Kelas 5", capacity: "50 orang", img: "/gambarenam.jpg" },
   ];
 
   const bookingData = {
@@ -409,7 +404,7 @@ export default function BookingTab({
               onChange={(e) => setUnitKerja(e.target.value)}
               className="w-full border rounded-lg px-3 py-2 font-normal bg-white"
             >
-              <option value="">Pilih Unit Kerja</option>
+              <option value="">Pilih Kelas</option>
               {unitOptions.map((unit) => (
                 <option key={unit} value={unit}>
                   {unit}
