@@ -82,7 +82,7 @@ export default function Login({ onLogin, onSwitchToRegister }: LoginProps) {
               <h2 className="text-center text-4xl font-bold">SELAMAT DATANG DI</h2>
               <h1 className="text-center text-8xl font-bold mb-2">e-RUKAS</h1>
               <p className="text-center text-2xl mb-6">
-                Sistem Informasi Pelayanan Peminjaman Ruangan Kelas
+                Elektronik Ruang Kelas Administration System
               </p>
             </div>
 

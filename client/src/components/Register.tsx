@@ -83,7 +83,7 @@ export default function Register({ onRegister, onSwitchToLogin }: RegisterProps)
             <div className="mb-16 text-center">
               <h2 className="text-4xl font-bold">BUAT AKUN BARU</h2>
               <h1 className="text-8xl font-bold mb-2">e-RUKAS</h1>
-              <p className="text-2xl">Sistem Informasi Pelayanan Peminjaman Ruangan Kelas</p>
+              <p className="text-2xl">Elektronik Ruang Kelas Administration System</p>
             </div>
 
             <form
